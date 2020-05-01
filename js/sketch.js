@@ -20,7 +20,7 @@ function setup() {
     paintMode = true;
     label = document.getElementById("click-type");
 
-    grid = new Grid(tileSize);
+    grid = new Automata(tileSize, [3], [2,3]);
     grid.display();
 
     playButton = {
@@ -41,7 +41,7 @@ function setup() {
 
     resetButton = createButton("Reset").size(150, 30);
     resetButton.mousePressed(() => {
-        grid = new Grid(tileSize);
+        grid = new Automata(tileSize, [3], [2,3]);
         grid.display();
 
         playButton.button.html("Play");
